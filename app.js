@@ -1,10 +1,16 @@
-const express = require("express");
+import express from "express";
+import ping from "./routes/ping.js";
+import deleteCustomer from "./routes/customer/deleteCustomer.js";
+import createCustomer from "./routes/customer/createCustomer.js";
+
 const app = express();
 
 // middleware
-//app.use(express.json());
+app.use(express.json());
 
-app.use(require("./routes/healthCheck"));
+app.use(ping);
+app.use(deleteCustomer);
+app.use(createCustomer);
 
 const PORT = process.env.PORT || 12345;
 app.listen(PORT, () => {
