@@ -1,4 +1,5 @@
 import express from "express";
+import { createCustomer } from "../../database/customer.js";
 
 const router = express.Router();
 
