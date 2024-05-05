@@ -1,10 +1,4 @@
-export async function createCustomer(
-  name,
-  email,
-  phoneNumber,
-  address,
-  dateOfBirth
-) {
+export async function createCustomer(details) {
   // TODO create customer
   // TODO sql table operations
   // TODO return customer id
@@ -15,7 +9,7 @@ export async function deleteCustomer(id) {
   // TODO sql table operations
 }
 
-export async function updateCustomer(id, name) {
+export async function updateCustomer(id, details) {
   // TODO update customer
   // TODO sql table operations
 }

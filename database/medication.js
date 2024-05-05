@@ -1,4 +1,4 @@
-export async function createMedication(name) {
+export async function createMedication(details) {
   // TODO create medication
   // TODO sql table operations
   // TODO return medication id
@@ -9,7 +9,7 @@ export async function deleteMedication(id) {
   // TODO sql table operations
 }
 
-export async function updateMedication(id, name) {
+export async function updateMedication(id, details) {
   // TODO update medication
   // TODO sql table operations
 }
