@@ -6,7 +6,7 @@ const router = express.Router();
 router.get("/medication", function (req, res) {
   console.log("params", req.params);
   // TODO retrieve medication from db
-  res.send(db.medication);
+  res.send("medication");
 });
 
 export default router;

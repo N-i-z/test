@@ -6,7 +6,7 @@ const router = express.Router();
 router.get("/customer", function (req, res) {
   console.log("params", req.params);
   // TODO retrieve customers from db
-  res.send(db.customer);
+  res.send("customer");
 });
 
 export default router;
