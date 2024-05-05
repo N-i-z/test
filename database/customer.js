@@ -1,3 +1,5 @@
+import db from "./database.js";
+
 export async function createCustomer(details) {
   // TODO create customer
   // TODO sql table operations
