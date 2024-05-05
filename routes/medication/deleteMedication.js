@@ -1,4 +1,5 @@
 import express from "express";
+import { deleteMedication } from "../../database/medication.js";
 
 const router = express.Router();
 

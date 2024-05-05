@@ -1,4 +1,5 @@
 import express from "express";
+import { deleteCustomer } from "../../database/customer.js";
 
 const router = express.Router();
 

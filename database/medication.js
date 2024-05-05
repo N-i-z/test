@@ -13,3 +13,13 @@ export async function updateMedication(id, name) {
   // TODO update medication
   // TODO sql table operations
 }
+
+export async function getAllMedication() {
+  // TODO get all customers
+  // TODO sql table operations
+}
+
+export async function getMedicationById(id) {
+  // TODO get all customers
+  // TODO sql table operations
+}

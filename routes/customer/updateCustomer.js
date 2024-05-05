@@ -1,4 +1,5 @@
 import express from "express";
+import { updateCustomer } from "../../database/customer.js";
 
 const router = express.Router();
 
