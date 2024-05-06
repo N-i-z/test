@@ -1,7 +1,13 @@
+import db from "./database.js";
+
 export async function createMedication(details) {
-  // TODO create medication
-  // TODO sql table operations
-  // TODO return medication id
+  const statement = db.prepare(
+    "INSERT INTO medication (name, quantity) VALUES (@name, @quantity)"
+  );
+  const result = statement.run(details);
+  console.log("result", result);
+  const id = result.lastInsertRowid;
+  return id;
 }
 
 export async function deleteMedication(id) {

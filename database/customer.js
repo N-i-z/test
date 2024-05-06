@@ -9,7 +9,6 @@ export async function createCustomer(details) {
   console.log("result", result);
   const id = result.lastInsertRowid;
   return id;
-  // TODO return customer id
 }
 
 export async function deleteCustomer(id) {
