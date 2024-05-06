@@ -25,7 +25,18 @@ export async function getAllMedication() {
   // TODO sql table operations
 }
 
-export async function getMedicationById(id) {
-  // TODO get all customers
-  // TODO sql table operations
+export async function getMedicationById(medicationId) {
+  return new Promise((resolve, reject) => {
+    db.prepare(
+      "SELECT * FROM medication WHERE medicationId = ?",
+      [medicationId],
+      (err, row) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+        resolve(row);
+      }
+    );
+  });
 }
