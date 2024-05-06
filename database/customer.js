@@ -1,8 +1,14 @@
 import db from "./database.js";
 
+// details is an object with properties: name, email
 export async function createCustomer(details) {
-  // TODO create customer
-  // TODO sql table operations
+  const statement = db.prepare(
+    "INSERT INTO customer (name, email) VALUES (@name, @email)"
+  );
+  const result = statement.run(details);
+  console.log("result", result);
+  const id = result.lastInsertRowid;
+  return id;
   // TODO return customer id
 }
 
